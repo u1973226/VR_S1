@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public score scoreInstance;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class Target : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        scoreInstance.oneMore();
         Destroy(gameObject);
     }
     
